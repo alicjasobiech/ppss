@@ -9,7 +9,7 @@ Users who want to use the materials online in `Google Colab` should follow these
 1. Go to [www.colab.research.google.com](https://colab.research.google.com/) (it is better to have a Google Account but not necessary).
 2. Press GitHub in the popup window or press File and Open notebook.
 3. Type `MikoBie` in the search box (compare the picture below).
-![github](png/github.png)
+![github](slides/P1/png/colab_notebook.png)
 4. Pick the relevant repository: `ppss`
 4. Choose the relevant notebook and click Open Notebook.
 
