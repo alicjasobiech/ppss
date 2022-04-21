@@ -1,6 +1,6 @@
 # `Programming in Python for Social Scientists`
 
-This repo is for the class on 'Programming in Python for Social Scientists' at the Faculty of Psychology, University of Warsaw. It was mostly designed to use it with Google Colab, but if you know what you are doing you can use it with Anaconda or any other enviornment with Jupyter Notebook App. In the folder slides, there are subfolders with `LaTeX` files for building `pdf` files. You are welcome to use them if you know `LaTeX` and you have `xelatex` installed.
+This repo is for the class on 'Programming in Python for Social Scientists' at the Faculty of Psychology, University of Warsaw. It was mostly designed to use with Google Colab, but if you know what you are doing you can use it with Anaconda or any other environment with Jupyter Notebook App. In the folder slides, there are subfolders with `LaTeX` files for building `pdf` files. You are welcome to use them if you know `LaTeX` and you have `xelatex` installed.
 
 ## Google Colab
 
