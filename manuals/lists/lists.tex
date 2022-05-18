@@ -1,0 +1,59 @@
+\documentclass{standalone}
+\usepackage{amsfonts, amsmath, amssymb, bm} %Math fonts and symbols
+\usepackage{dcolumn, multirow} % decimal-aligned columns, multi-row cells
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{graphicx, subfigure, float} % graphics commands
+\usepackage[margin=1in]{geometry} % sets page layout
+\usepackage{setspace}% allows toggling of double/single-spacing
+\usepackage{verbatim}% defines environment for un-evaluated code
+\usepackage{natbib}% defines citation commands and environments.
+\singlespace % set document spacing to single
+\bibpunct[, ]{(}{)}{,}{a}{}{,} % sets the punctuation of the bibliography entires.
+\newcolumntype{d}[1]{D{.}{.}{#1}} % defines a decimal-aligned column
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usetikzlibrary{shapes.geometric, decorations.pathmorphing}
+\hyphenpenalty=10000
+
+\begin{document}
+\begin{tikzpicture}[>=stealth, 
+    list/.style={
+        % The shape:
+        rectangle,
+        % The size:
+        minimum size=.9cm,
+        % The border
+        thick,
+        draw=black,
+        % The filling
+        fill=white,
+        % Font
+        font=\itshape
+    }]
+    \begin{scope}[xshift = 4.95cm, yshift = 4.5cm]
+        \draw [fill = gray] plot[domain=0:350, smooth cycle] (\x:4.6+rnd*0.5);
+    \end{scope}
+    \node [fill = white, draw = black] (oned) at (-2,8.5) {OneD};
+    \node [fill = white, draw = black] (bbands) at (-2, 7.25) {BBands};
+    \node [fill = white, draw = black] (bts) at (-2,6) {BTS};
+    \node [fill = white, draw = black] (onedv) at (5,8.5) {\small[NH, LP, HS, LT, ZM]};
+    \node [fill = white, draw = black] (bbandsv) at (5, 7.25) {\small [\phantom{OneD}, \phantom{BTS}]};
+    \node [fill = white, draw = black] (btsv) at (5,6) {\small[Jin, Suga, J-Hope, RM, Jimin, V, Jungkook]};
+    \draw [->, thick] (oned) -- (onedv);
+    \draw [->, thick] (bts) -- (btsv);
+    \draw [->, thick] (bbands) -- (bbandsv);
+    \draw [<-, thick] (btsv) -- (5.5, 6.95);
+    \draw [<-, thick] (onedv) -- (4.55,7.55);
+    \node [fill = white, draw = black] (onedv2) at (5,4) {\small[NH, LP, HS, LT, ZM]};
+    \node [fill = white, draw = black] (btsv2) at (5,1.5) {\small[Jin, Suga, J-Hope, RM, Jimin, V, Jungkook]};
+    \node [fill = white, draw = black] (bbandsv2) at (5, 2.75) {\small [\phantom{OneD}, \phantom{BTS}]};
+    \node [fill = white, draw = black] (bbands2) at (-2, 2.75) {BBands1};
+    \draw [->, thick] (bbands2) -- (bbandsv2);
+    \draw [<-, thick] (btsv2) -- (5.5, 2.45);
+    \draw [<-, thick] (onedv2) -- (4.55,3.05);
+
+\end{tikzpicture}
+\end{document}
