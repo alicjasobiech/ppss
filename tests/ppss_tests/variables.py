@@ -7,5 +7,5 @@ s_vals = ('aba', 'ababab', 'a', 'aa')
 sub_vals = ('a', 'ab', 'ababab', 'b', 'bb')
 
 ## HW3 Task 3
-vals_s1 = ('aaa', 'bbb', 'aba', 'bab')
+vals_s1 = ('aaa', 'bbb', 'aba', 'bab', 'a')
 vals_s2 = ('a', 'bbb', 'ab', 'ba', 'cc')

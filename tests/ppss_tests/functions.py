@@ -58,7 +58,7 @@ def test_is_in(is_in, vals_s1 = vals_s1, vals_s2 = vals_s2):
 	for s1 in vals_s1:
 		for s2 in vals_s2:
 			result = is_in(s1, s2)
-			if (result and (s1.find(s2) != -1 or s2.find(s1) != -1)) or (not result and (s1.find(s2) == -1 or s2.find(s1) == -1)):
+			if (result and (s1.find(s2) != -1 or s2.find(s1) != -1)) or (not result and not (s1.find(s2) != -1 or s2.find(s1) != -1)):
 				val = 'Ok'
 			else:
 				val = 'Bad'
