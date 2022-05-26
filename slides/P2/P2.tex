@@ -1,0 +1,152 @@
+\documentclass{beamer}
+\usepackage{ulem}
+\usepackage{tikz}
+\usepackage{booktabs}
+ \usepackage{graphicx,threeparttable,caption}
+\usetikzlibrary{shapes,snakes}
+\usepackage[beamer,customcolors]{hf-tikz}
+\usepackage{nicematrix}
+\usepackage{xcolor}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{csquotes}
+\usepackage{csquotes}
+\usepackage{minted}
+\captionsetup{labelformat=empty,labelsep=none}
+
+\graphicspath{ {./png/} }
+\tikzset{hl/.style={
+    set fill color=red!80!black!40,
+    set border color=red!80!black,
+  },
+}
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+%\usecolortheme[orchid]{structure}
+\usetheme[hideothersubsections]{PaloAlto}
+\makeatletter
+\patchcmd{\csq@bquote@i}{{#6}}{{\emph{#6}}}{}{}
+\makeatother
+%\usecolortheme{orchid}
+%\usefonttheme{professionalfonts}
+\newcommand{\soutthick}[1]{%
+   \textcolor{red}{
+   \renewcommand{\ULthickness}{1pt}%
+      \sout{#1}%
+   \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
+   }
+}
+\newcommand{\centered}[1]{\begin{tabular}{l} #1 \end{tabular}}
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{subsection in toc}[square]
+\setbeamertemplate{secion in sidebar}[shaded]
+\setbeamertemplate{items}[square]
+\setbeamercovered{transparent} 
+
+\title[]{Programming in Python for Social Scientists}
+\subtitle{JSON}
+\author[]{Mikołaj Biesaga\\ \small{\color{blue}{\href{mailto:m.biesaga@uw.edu.pl}{m.biesaga@uw.edu.pl}}}}
+\institute{\includegraphics[width = 4 cm]{uw.png}}
+\date{\today}
+\begin{document}
+\begin{frame}
+   \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Data Formats}
+    \only<+>{
+        Marianna is a 17 years old young lady. Although her main field of interest is physics (especially quantum physics and string theory), she also fancies sport. Her favorite physical activities are fishing and football.
+        Marian, on the other hand, is a naughty 15 years old boy who only loves literature, especially Szymborska poems touches his heart.
+    }
+    \only<+>{
+        \textcolor{red}{Marianna} is a \textcolor{blue}{17} years old young lady. Although her main field of interest is \underline{physics} (especially \textbf{quantum physics} and \textbf{string theory}), she also fancies \underline{sport}. Her favorite physical activities are \textbf{fishing} and \textbf{football}.
+        \textcolor{red}{Marian}, on the other hand, is a naughty \textcolor{blue}{15} years old boy who only loves \underline{literature}, especially Szymborska \textbf{poems} touches his heart.
+    }
+    \only<+>{
+        \resizebox{\textwidth}{!}{
+            \begin{tabular}{l | c | c | c | c | c | c | c | c }
+            Name & Sex & Age & Interest A & Interest A1 & Interest A2 & Interest B & Interest B1 & Interest B2\\
+            \hline \hline
+            Marianna & F & 17 & physics & quantum physics & string theory & sport & fishing & football\\
+            Marian & M & 15 & literature & poems & n/a & n/a & n/a & n/a \\
+            \end{tabular}}
+
+    }
+\end{frame}
+
+\begin{frame}[fragile]{JSON - JavaScript Object Notation}
+\begin{minted}[fontsize=\footnotesize]{js}
+{
+    "name": "Alice",
+    "age": 17,
+    "interests": [
+        {
+            "name": "physics",
+            "disciplines": [
+                "quantum physics",
+                "string theory"
+            ]
+        },
+        {
+            "name": "sport",
+            "disciplines": [
+                "fishing",
+                "football"
+            ]
+        }
+    ]
+}
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{JSON - JavaScript Object Notation}
+\begin{minted}[fontsize=\footnotesize]{js}
+{
+    "name": "Bob",
+    "age": 15,
+    "interests": [
+        {
+            "name": "literature",
+            "genre": [
+                "poems"
+            ]
+        }
+    ]
+}
+\end{minted}
+\end{frame}
+
+\begin{frame}
+    \frametitle{JSON - JavaScript Object Notation}
+    \begin{definition}
+        \emph{JavaScript Object Notation} is a lightweight text data format which is relatively easy to read for both human naked eye and computers. Although it derives from JavaScript it is a language-independent data format. JSON is built on two structures: a collection of key-item pairs and ordered list of values. JSON filenames use .json extension.
+    \end{definition}
+\end{frame}
+
+
+\begin{frame}[fragile]{JSON Lines}
+\begin{minted}[fontsize=\footnotesize]{js}
+{"name":"Alice","age":17,"interests":[
+    {"name":"physics","fields":["quantumphysics","stringtheory"]},
+    {"name":"sport","fields":["fishing","football"]}
+]}
+{"name":"Bob","age":15,"interests":[
+    {"name":"literature","genre":["poems"]}
+]}
+\end{minted}
+\begin{definition}
+    \emph{JSON Lines} (newline-delimited JSON) is a lightweight text data format which can be processed one record at a time. Each line consists of a JSON. JSON Lines filenames use .jl or .jsonl extensions.
+\end{definition}
+\end{frame}
+
+
+\end{document}
