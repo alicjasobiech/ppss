@@ -401,3 +401,6 @@ lista.csv
 
 # Homework
 homework/*
+
+# Archives
+*.zip
