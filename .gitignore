@@ -404,3 +404,6 @@ homework/*
 
 # Archives
 *.zip
+
+# Excel
+*.xlsx
