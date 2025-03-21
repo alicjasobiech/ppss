@@ -13,7 +13,15 @@ Users who want to use the materials online in `Google Colab` should follow these
 4. Pick the relevant repository: `ppss`
 4. Choose the relevant notebook and click Open Notebook.
 
-That is it, an interactive notebook should open.
+That is it, an interactive notebook should open. Or alternatively you can use the links below:
+
+* [Overview of basic programming concepts](https://colab.research.google.com/github/MikoBie/ppss/blob/main/N1.ipynb)
+* [Branching and Iterations](https://colab.research.google.com/github/MikoBie/ppss/blob/main/N2.ipynb) ([Homework Assignment 1](https://colab.research.google.com/github/MikoBie/ppss/blob/main/HW1.ipynb))
+* [Operations on strings](https://colab.research.google.com/github/MikoBie/ppss/blob/main/N3.ipynb) ([Homework Assignment 2](https://colab.research.google.com/github/MikoBie/ppss/blob/main/HW2.ipynb))
+* [Functions](https://colab.research.google.com/github/MikoBie/ppss/blob/main/N4.ipynb) ([Homework Assignment 3](https://colab.research.google.com/github/MikoBie/ppss/blob/main/HW3.ipynb))
+* [Tuples, Lists, Aliasing, Mutability, and Cloning](https://colab.research.google.com/github/MikoBie/ppss/blob/main/N5.ipynb) ([Homework Assignment 4](https://colab.research.google.com/github/MikoBie/ppss/blob/main/HW4.ipynb))
+* [Dictionaries (mappings) and JSON](https://colab.research.google.com/github/MikoBie/ppss/blob/main/N6.ipynb)
+* [Files](https://colab.research.google.com/github/MikoBie/ppss/blob/main/Data_Analysis.ipynb) ([Homework Assignment 5](https://colab.research.google.com/github/MikoBie/ppss/blob/main/HW5.ipynb))
 
 ## Jupyter Notebook App
 
